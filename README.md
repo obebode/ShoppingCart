@@ -26,7 +26,7 @@ Step 2: Simple offers
 ● Update your checkout functions accordingly
 
 
-Technologies 
+Technologies & Dev tools
 
 1. Scala
 2. Sbt
