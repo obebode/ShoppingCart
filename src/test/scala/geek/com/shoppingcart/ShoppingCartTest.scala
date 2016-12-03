@@ -58,4 +58,25 @@ class ShoppingCartTest extends Specification {
   "Price of 2 oranges and 2 apples to Checkout" in {
     ShoppingCart.checkout(Array("orange", "orange", "apple", "apple")) must be equalTo 1.70
   }
+
+  "Pay the price for one apple 0.60 when the shopper buys 2" in {
+    ShoppingCart.checkoutOffers(Array("apple", "apple")) must be equalTo 0.60
+  }
+
+  "Pay the price for two oranges when the shopper buys 3" in {
+    ShoppingCart.checkoutOffers(Array("orange", "orange", "orange")) must be equalTo 0.50
+  }
+
+  "When the shopper mix things up: 2 apples and 1 orange the total cost should be 0.85" in {
+    ShoppingCart.checkoutOffers(Array("apple", "apple", "orange")) must be equalTo 0.85
+  }
+
+  "When the shopper mix things up: 3 oranges and 1 apple the total cost should be 1.10" in {
+    ShoppingCart.checkoutOffers(Array("orange", "orange", "orange", "apple")) must be equalTo 1.10
+  }
+
+  "When the shopper mix things up: 3 oranges and 2 apples the total cost should be 1.10" in {
+    ShoppingCart.checkoutOffers(Array("orange", "orange", "orange", "apple", "apple")) must be equalTo 1.10
+  }
+
 }

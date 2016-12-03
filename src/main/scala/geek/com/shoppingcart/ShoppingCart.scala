@@ -19,4 +19,13 @@ object ShoppingCart {
     BigDecimal(totalCost).setScale(2, RoundingMode.HALF_EVEN).toDouble
   }
 
+  def checkoutOffers(items: Array[String]): Double = {
+    val numOfApples: Int = items.count(p => p.equalsIgnoreCase("apple"))
+    val numOfOranges: Int = items.count(p => p.equalsIgnoreCase("orange"))
+
+    val totalCost = Offers.offer("apple")(numOfApples) + Offers.offer("orange")(numOfOranges)
+
+    BigDecimal(totalCost).setScale(2, RoundingMode.HALF_EVEN).toDouble
+  }
+
 }

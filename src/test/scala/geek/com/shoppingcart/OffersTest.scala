@@ -27,7 +27,7 @@ class OffersTest extends Specification {
     Offers.offer("apple")(2) must be equalTo ShoppingCart.getPrice("apple")
   }
 
-  "Buy Two and get Three offer offer on Oranges" in {
+  "Buy Two and get Three  offer on Oranges" in {
     Offers.offer("orange")(3) must be equalTo (2 * ShoppingCart.getPrice("orange"))
   }
 
