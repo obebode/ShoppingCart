@@ -25,6 +25,6 @@ Technologies &
 4. IntelliJ IDEA 14
 5. Mac PC
 
-The test can be run using "sbt run" or other sbt testing commands 
+The test can be run using "sbt test" or other sbt testing commands 
 
 
