@@ -2,6 +2,7 @@
 Mini-ShoppingCart and Checkout App
 
 Step 1: Shopping cart
+
 ● You are building a checkout system for a shop which only sells apples and
 oranges.
 
